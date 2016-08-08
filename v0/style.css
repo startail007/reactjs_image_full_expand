@@ -1,7 +1,7 @@
 body{
     margin: 0px;
 }
-.FullExpand > .Button{
+.ImageFullExpand > .Button{
     float: left;
     position: relative;
     display: block;
@@ -15,7 +15,7 @@ body{
     background-position: center;
     cursor: pointer;
 }
-.FullExpand > .Full{
+.ImageFullExpand > .Full{
     position: fixed;    
     display: block;
     background-color: rgba(165, 42, 42, 0);
@@ -26,13 +26,13 @@ body{
     align-items:center;
     justify-content:center;
 }
-.FullExpand > .Full.active{ 
+.ImageFullExpand > .Full.active{ 
     background-color: rgba(34, 31, 31, 0.95);
     visibility: inherit;
     z-index: 1;
     opacity: 1;
 }
-.FullExpand > .Full > .Close{ 
+.ImageFullExpand > .Full > .Close{ 
     position: absolute;    
     display: block;
     right: 5px;
@@ -47,10 +47,10 @@ body{
     background-repeat: no-repeat;
     border-radius: 20px;
 }
-.FullExpand > .Full > .Close:hover{ 
+.ImageFullExpand > .Full > .Close:hover{ 
     background-color: rgba(255, 255, 255, 0.1);
 }
-.FullExpand > .Full > .Image{ 
+.ImageFullExpand > .Full > .Image{ 
     object-fit:contain;
     max-width: 100%;
     max-height: 100%;

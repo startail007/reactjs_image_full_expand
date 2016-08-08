@@ -2,7 +2,7 @@ var getPosition = function(el) {
     var Rect = el.getBoundingClientRect();
     return new Point(Rect.left + window.scrollX, Rect.top + window.scrollY);
 }
-var FullExpand = React.createClass({
+var ImageFullExpand = React.createClass({
     getInitialState: function() {
         return {open:false,rect:{left:0,top:0,width:0,height:0},Anim:false,src:this.props.src ||""};
     },
@@ -58,7 +58,7 @@ var FullExpand = React.createClass({
         var ButtonStyle ={backgroundImage:'url('+this.state.src+')'};
         var FullClass = "Full " + (this.state.open?"active":"");
         return (
-                <div className = "FullExpand">
+                <div className = "ImageFullExpand">
                     <div ref = "Button"  className = "Button" style = {ButtonStyle} onClick = {this.onClick}> 
 
                     </div>
@@ -71,14 +71,10 @@ var FullExpand = React.createClass({
     }
 });
 ReactDOM.render(
-    <FullExpand src = {'image01.jpg'} />,
+    <ImageFullExpand src = {'image01.jpg'} />,
     document.getElementById('example01')
 );
 ReactDOM.render(
-    <FullExpand src = {'image02.jpg'} />,
+    <ImageFullExpand src = {'image02.jpg'} />,
     document.getElementById('example02')
 );
-/*ReactDOM.render(
-    <FullExpand/>,
-    document.getElementById('example03')
-);*/
